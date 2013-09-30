@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/action_sms"
+          android:icon="@drawable/social_share"
+          android:title="@string/action_sms"
+          android:showAsAction="ifRoom" />
+    
+    <item android:id="@+id/action_map"
+          android:icon="@drawable/location_map"
+          android:title="@string/action_map"
+          android:showAsAction="ifRoom" />
+    
+    <item android:id="@+id/action_video"
+          android:icon="@drawable/av_play_over_video"
+          android:title="@string/action_video"
+          android:showAsAction="ifRoom" />
+    
+    <item android:id="@+id/action_call"
+          android:icon="@drawable/device_access_call"
+          android:title="@string/action_call"
+          android:showAsAction="ifRoom" />
+    
+</menu>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AD Tracking App</string>
+    <string name="action_sms">SMS</string>
+    <string name="action_map">Map</string>
+    <string name="action_call">Call</string>
+    <string name="action_video">Video</string>
+    <string name="title_activity_display_message">Mobile Ad Displayer</string>
+    <string name="title_activity_tracking_report">Mobile Ad Tracking Report</string>
+    <string name="placeholder_desc">Base App Placeholder</string>
+    <string name="barcode_desc">Barcode</string>
+    <string name="edit_destination">Send SMS to...</string>
+
+    <string-array name="reports_array">
+        <item>Counts</item>
+        <item>Users</item>
+        <item>SMS</item>
+        <item>Call</item>
+        <item>Map</item>
+    </string-array>
+
+</resources>

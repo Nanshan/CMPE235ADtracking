@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".BannerFragment" >
+    
+    <ImageView
+        android:id="@+id/ad_image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="fitCenter"
+        android:contentDescription="Placeholder Image"
+        android:onClick="openAdDisplay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"/>
+
+</RelativeLayout>

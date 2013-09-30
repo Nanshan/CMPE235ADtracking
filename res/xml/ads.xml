@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ads>
+    <ad>
+        <name>Warriors</name>
+		<image>warriors2</image>
+		<image2>warriors1</image2>
+		<shareText>Check out the Golden State Warriors!</shareText>
+		<address>7000 Coliseum Way Oakland CA 94621</address>
+		<phone>5109862200</phone>
+		<video>AKkdGgjssjw</video>
+		<url>http://www.nba.com/warriors/</url>
+	</ad>
+	<ad>
+        <name>Heat</name>
+		<image>heat1</image>
+		<image2>heat2</image2>
+		<shareText>Check out the Miami Heat!</shareText>
+		<address>601 Biscayne Blvd Miami, FL 33132</address>
+		<phone>7867771000</phone>
+		<video>Yn5zCzuAqiY</video>
+		<url>http://www.nba.com/heat/</url>
+	</ad>
+
+</ads>

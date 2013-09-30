@@ -1,0 +1,18 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".AdImageFragment" >
+
+    <ImageView
+        android:id="@+id/ad_image_2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="center"
+        android:contentDescription="Placeholder Image"
+        android:src="@drawable/warriors1" 
+        android:onClick="openURL"
+        android:layout_alignParentLeft="true"
+       	android:layout_alignParentRight="true" />
+
+</RelativeLayout>

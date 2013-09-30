@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".AdDisplayActivity" 
+    android:orientation="vertical"
+    android:baselineAligned="false" >
+    
+    <fragment
+        android:id="@+id/ad_image_fragment"
+        android:name="com.lifangmoler.lab1.fragment.AdImageFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:layout="@layout/ad_image_view" />
+
+    <fragment
+        android:id="@+id/barcode_fragment"
+        android:name="com.lifangmoler.lab1.fragment.AdBarcodeFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        tools:layout="@layout/ad_barcode_view" />
+    
+    <EditText android:id="@+id/edit_destination"
+        android:layout_weight="3"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:hint="@string/edit_destination" />
+
+</LinearLayout>
