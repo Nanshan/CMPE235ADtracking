@@ -28,7 +28,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.location.LocationClient;
 import com.lifangmoler.lab1.fragment.BannerFragment;
-import com.lifangmoler.lab2.db.TrackingDatabaseUtil;
+import com.lifangmoler.lab2.db.MobileAdEventTracker;
 
 public class AdDisplayActivity extends FragmentActivity implements
 GooglePlayServicesClient.ConnectionCallbacks,
@@ -155,7 +155,7 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 		Uri number = Uri.parse("tel:"+phone);
 		Intent callIntent = new Intent(Intent.ACTION_DIAL, number);
 		
-		TrackingDatabaseUtil.addCallEvent(getBaseContext(), name, phone, mLocationClient.getLastLocation()); // track the call
+		new MobileAdEventTracker(getBaseContext(), mLocationClient.getLastLocation()).trackCallEvent(name, phone); // track the call
 
 		startActivity(callIntent);
 	}
@@ -169,7 +169,7 @@ GooglePlayServicesClient.OnConnectionFailedListener {
         PendingIntent piSent = PendingIntent.getBroadcast(getBaseContext(), 0, new Intent("SMS_SENT"), 0);
         PendingIntent piDelivered = PendingIntent.getBroadcast(getBaseContext(), 0,new Intent("SMS_DELIVERED"), 0);
         smsManager.sendTextMessage(dest, null, share, piSent, piDelivered);
-		TrackingDatabaseUtil.addSMSEvent(getBaseContext(), name, dest, share, mLocationClient.getLastLocation()); // track the sms
+		new MobileAdEventTracker(getBaseContext(), mLocationClient.getLastLocation()).trackSMSEvent(name, dest, share);
 	}
 
 	private void openMap() {
@@ -183,7 +183,7 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 		boolean isIntentSafe = activities.size() > 0;
 		
 		if (isIntentSafe) {
-			TrackingDatabaseUtil.addMapEvent(getBaseContext(), name, address, mLocationClient.getLastLocation()); // track the map
+			new MobileAdEventTracker(getBaseContext(), mLocationClient.getLastLocation()).trackMapEvent(name, address); // track the map
 			startActivity(mapIntent);
 		}
 		else {
@@ -198,7 +198,7 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 	}
 
 	public void openURL(View view) {
-		TrackingDatabaseUtil.addClickThroughEvent(getBaseContext(), name, mLocationClient.getLastLocation()); // track the click
+		new MobileAdEventTracker(getBaseContext(), mLocationClient.getLastLocation()).trackClickThroughEvent(name); 
 
 		Uri website = Uri.parse(url);
 		Intent intent = new Intent(Intent.ACTION_VIEW, website);

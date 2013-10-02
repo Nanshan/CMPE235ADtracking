@@ -14,8 +14,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient;
 import com.google.android.gms.location.LocationClient;
 import com.lifangmoler.lab1.fragment.BannerFragment;
-import com.lifangmoler.lab2.TrackingReportActivity;
-import com.lifangmoler.lab2.db.TrackingDatabaseUtil;
+import com.lifangmoler.lab2.db.MobileAdEventTracker;
 
 /**
  * The activity for the "Base App".
@@ -62,10 +61,8 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 	            @Override
 	            public void onPageSelected(int position) {
 	            	// track this as an impression
-	        		TrackingDatabaseUtil.addImpressionEvent(getBaseContext(), 
-	        				adCollectionPagerAdapter.getItem(position).
-	        				getArguments().getString(BannerFragment.ARG_NAME),
-	        				mLocationClient.getLastLocation()); 
+	        		new MobileAdEventTracker(getBaseContext(), mLocationClient.getLastLocation()).trackImpressionEvent(adCollectionPagerAdapter.getItem(position).
+	        				getArguments().getString(BannerFragment.ARG_NAME));
 	            }
     		}
     	);
@@ -110,14 +107,9 @@ GooglePlayServicesClient.OnConnectionFailedListener {
 		intent.putExtra(BannerFragment.ARG_PHONE, args.getString(BannerFragment.ARG_PHONE));
 		intent.putExtra(BannerFragment.ARG_URL, args.getString(BannerFragment.ARG_URL));
 		
-		TrackingDatabaseUtil.addClickEvent(getBaseContext(), args.getString(BannerFragment.ARG_NAME), mLocationClient.getLastLocation()); // track the click
+		new MobileAdEventTracker(getBaseContext(), mLocationClient.getLastLocation()).trackClickEvent(args.getString(BannerFragment.ARG_NAME)); // track the click
 		
 		startActivity(intent); // start the activity
-	}
-	
-	public void openTrackingReport(View view) {
-		Intent intent = new Intent(this, TrackingReportActivity.class);
-		startActivity(intent);
 	}
 	
 	// google play services stuff (for getting user location)
@@ -155,10 +147,9 @@ GooglePlayServicesClient.OnConnectionFailedListener {
     public void onConnected(Bundle dataBundle) {
     	if (!initialImpressionShown) {
 	        // add the initial impression from the ad displaying on startup
-	        TrackingDatabaseUtil.addImpressionEvent(getBaseContext(), 
+	        new MobileAdEventTracker(getBaseContext(), mLocationClient.getLastLocation()).trackImpressionEvent(
 					adCollectionPagerAdapter.getItem(0).
-					getArguments().getString(BannerFragment.ARG_NAME),
-					mLocationClient.getLastLocation()); 
+					getArguments().getString(BannerFragment.ARG_NAME));
 	        initialImpressionShown = true;
     	}
     }

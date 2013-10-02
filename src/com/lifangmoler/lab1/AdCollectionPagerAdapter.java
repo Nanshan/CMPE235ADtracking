@@ -13,7 +13,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.lifangmoler.lab1.fragment.BannerFragment;
-import com.lifangmoler.lab2.db.TrackingDatabaseUtil;
 
 //Since this is an object collection, use a FragmentStatePagerAdapter,
 //and NOT a FragmentPagerAdapter.
@@ -84,10 +83,6 @@ public class AdCollectionPagerAdapter extends FragmentStatePagerAdapter {
 		xrp.nextTag();		
 		args.putString(BannerFragment.ARG_URL, xrp.nextText());//website
 		ad.setArguments(args);
-		
-		// add the ad to the database
-		TrackingDatabaseUtil.addAdvert(c, args.getString(BannerFragment.ARG_NAME),
-				args.getString(BannerFragment.ARG_URL));
 		
 		return ad;
 	}

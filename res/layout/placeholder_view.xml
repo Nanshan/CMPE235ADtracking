@@ -10,7 +10,6 @@
         android:scaleType="fitCenter"
         android:contentDescription="@string/placeholder_desc"
         android:src="@drawable/placeholder" 
-        android:onClick="openTrackingReport"
         android:layout_alignParentLeft="true"
        	android:layout_alignParentRight="true" />
 

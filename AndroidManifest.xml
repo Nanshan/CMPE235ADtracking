@@ -38,14 +38,6 @@
                 android:name="android.support.UI_OPTIONS"
                 android:value="splitActionBarWhenNarrow" />
         </activity>
-        <activity 
-            android:name="com.lifangmoler.lab2.TrackingReportActivity"
-            android:label="@string/title_activity_tracking_report"
-            android:parentActivityName="com.lifangmoler.lab1.BaseAppActivity" >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.lifangmoler.lab1.BaseAppActivity" />
-        </activity>
     </application>
 
 </manifest>

@@ -199,36 +199,30 @@ containing a value of this type.
         public static final int warriors2=0x7f020026;
     }
     public static final class id {
-        public static final int action_call=0x7f060013;
-        public static final int action_map=0x7f060011;
-        public static final int action_sms=0x7f060010;
-        public static final int action_video=0x7f060012;
-        public static final int ad_image=0x7f06000c;
-        public static final int ad_image_2=0x7f06000b;
+        public static final int action_call=0x7f06000f;
+        public static final int action_map=0x7f06000d;
+        public static final int action_sms=0x7f06000c;
+        public static final int action_video=0x7f06000e;
+        public static final int ad_image=0x7f06000b;
+        public static final int ad_image_2=0x7f06000a;
         public static final int ad_image_fragment=0x7f060005;
-        public static final int ad_name_entry=0x7f06000d;
         public static final int barcode_fragment=0x7f060006;
-        public static final int count_entry=0x7f06000f;
         public static final int edit_destination=0x7f060007;
         public static final int hybrid=0x7f060004;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int pager=0x7f060008;
         public static final int placeholder_fragment=0x7f060009;
-        public static final int reports_spinner=0x7f06000a;
         public static final int satellite=0x7f060002;
         public static final int terrain=0x7f060003;
-        public static final int type_name_entry=0x7f06000e;
     }
     public static final class layout {
         public static final int activity_ad_display=0x7f030000;
         public static final int activity_base_app=0x7f030001;
-        public static final int activity_tracking_report=0x7f030002;
-        public static final int ad_barcode_view=0x7f030003;
-        public static final int ad_image_view=0x7f030004;
-        public static final int banner_view=0x7f030005;
-        public static final int list_tracking_entry=0x7f030006;
-        public static final int placeholder_view=0x7f030007;
+        public static final int ad_barcode_view=0x7f030002;
+        public static final int ad_image_view=0x7f030003;
+        public static final int banner_view=0x7f030004;
+        public static final int placeholder_view=0x7f030005;
     }
     public static final class menu {
         public static final int display_message=0x7f0b0000;

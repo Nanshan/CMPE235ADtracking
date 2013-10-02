@@ -17,10 +17,8 @@ class PostEventTask extends AsyncTask<HttpPost, Void, Void> {
 				client.execute(post);
 			}
 		} catch (ClientProtocolException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return null;
