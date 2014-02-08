@@ -20,5 +20,35 @@
 		<video>Yn5zCzuAqiY</video>
 		<url>http://www.nba.com/heat/</url>
 	</ad>
+	<ad>
+        <name>Bulls</name>
+        <image>bulls</image>
+        <image2>bulls</image2>
+        <shareText>Check out Chicago Bulls!</shareText>
+        <address>1901 W Madison St  Chicago, IL 60612</address>
+        <phone>3124554000</phone>
+        <video>IVnNfNlPnT4</video>
+        <url>http://www.nba.com/bulls/splash-2013-14-ticket-presale</url>
+    </ad>
+    <ad>
+        <name>Thunder</name>
+        <image>thunder</image>
+        <image2>thunder</image2>
+        <shareText>Check out OKC Thunder!</shareText>
+        <address>211 N Robinson Ave #300S, Oklahoma City, OK  </address>
+        <phone>4052084800</phone>
+        <video>wYVolJRY9QM</video>
+        <url>http://www.nbathundershop.com</url>
+    </ad>
+  	<ad>
+        <name>Lakers</name>
+        <image>lakers</image>
+        <image2>lakers</image2>
+        <shareText>Check out the Los Angeles Lakers!</shareText>
+        <address>555 N Nash St, El Segundo, CA</address>
+        <phone>3104266000</phone>
+        <video>zbVthQAkx4k</video>
+        <url>http://www.nba.com/lakers/</url>
+    </ad>
 
 </ads>

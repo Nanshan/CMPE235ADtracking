@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lifangmoler.lab1"
-    android:versionCode="2"
-    android:versionName="2.0" >
+    android:versionCode="3"
+    android:versionName="3.0" >
 
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light" >
         <activity
-            android:name="com.lifangmoler.lab1.BaseAppActivity"
+            android:name="com.lifangmoler.adtracker.activity.BaseAppActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,12 +28,12 @@
             </intent-filter>
         </activity>
         <activity android:uiOptions="splitActionBarWhenNarrow"
-            android:name="com.lifangmoler.lab1.AdDisplayActivity"
+            android:name="com.lifangmoler.adtracker.activity.AdDisplayActivity"
             android:label="@string/title_activity_display_message"
-            android:parentActivityName="com.lifangmoler.lab1.BaseAppActivity" >
+            android:parentActivityName="com.lifangmoler.adtracker.activity.BaseAppActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.lifangmoler.lab1.BaseAppActivity" />
+                android:value="com.lifangmoler.adtracker.activity.BaseAppActivity" />
             <meta-data 
                 android:name="android.support.UI_OPTIONS"
                 android:value="splitActionBarWhenNarrow" />

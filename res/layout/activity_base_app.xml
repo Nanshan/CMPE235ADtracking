@@ -15,7 +15,7 @@
 
     <fragment
         android:id="@+id/placeholder_fragment"
-        android:name="com.lifangmoler.lab1.fragment.PlaceholderFragment"
+        android:name="com.lifangmoler.adtracker.fragment.PlaceholderFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"

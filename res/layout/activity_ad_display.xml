@@ -8,7 +8,7 @@
     
     <fragment
         android:id="@+id/ad_image_fragment"
-        android:name="com.lifangmoler.lab1.fragment.AdImageFragment"
+        android:name="com.lifangmoler.adtracker.fragment.AdImageFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -16,16 +16,11 @@
 
     <fragment
         android:id="@+id/barcode_fragment"
-        android:name="com.lifangmoler.lab1.fragment.AdBarcodeFragment"
+        android:name="com.lifangmoler.adtracker.fragment.AdBarcodeFragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:layout_weight="1"
         tools:layout="@layout/ad_barcode_view" />
     
-    <EditText android:id="@+id/edit_destination"
-        android:layout_weight="3"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:hint="@string/edit_destination" />
 
 </LinearLayout>
